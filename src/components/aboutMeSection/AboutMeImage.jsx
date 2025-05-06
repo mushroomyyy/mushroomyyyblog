@@ -3,7 +3,8 @@ const AboutMeImage = () => {
     <div className="h-[500px] w-[350px] relative">
       <div className="h-[500px] w-[350px] rounded-[100px] absolute overflow-hidden">
         <img
-          src="/mushroomyyyblog/images/test2.png" alt="About Me Image"
+          src="/mushroomyyyblog/images/png/test2.png" 
+          alt="About Me Image"
           className="h-full w-auto object-contain transform"
         />
       </div>
