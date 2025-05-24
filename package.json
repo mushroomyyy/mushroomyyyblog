@@ -1,5 +1,7 @@
 {
-  "name": "aq-portfolio",
+  "name": "mushroomyyyblog",
+  "version": "1.0",
+  "homepage": "https://mushroomyyy.github.io/mushroomyyyblog",
   "private": true,
   "version": "0.0.0",
   "type": "module",
