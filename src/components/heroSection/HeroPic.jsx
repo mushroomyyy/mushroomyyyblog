@@ -12,7 +12,7 @@ const HeroPic = () => {
       className=" h-full flex items-center justify-center "
     >
       <img
-        src="../../public/images/test.png"
+        src="/mushroomyyyblog/images/test.png"
         alt="Jordan Chua"
         className="max-h-[450px] w-auto"
       />
