@@ -1,35 +1,35 @@
-import ProjectsText from "./ProjectsText";
-import SingleProject from "./SingleProject";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
+import ProjectsText from "./ProjectsText";
+import SingleProject from "./SingleProject";
 
 const projects = [
   {
     name: "Bitbucket Code Doctor",
     year: "Sep2024",
     align: "right",
-    image: "../../public/images/website-img-1.jpg",
+    image: "/mushroomyyyblog/images/website-img-1.jpg",
     link: "#",
   },
   {
     name: "Prompt Template",
     year: "Jan2025",
     align: "left",
-    image: "../../public/images/website-img-2.webp",
+    image: "/mushroomyyyblog/images/website-img-2.webp",
     link: "#",
   },
   {
     name: "n8n Automation",
     year: "Feb2025",
     align: "right",
-    image: "../../public/images/website-img-3.jpg",
+    image: "/mushroomyyyblog/images/website-img-3.jpg",
     link: "#",
   },
   {
     name: "FoodMark",
     year: "May2025",
     align: "left",
-    image: "../../public/images/website-img-4.jpg",
+    image: "/mushroomyyyblog/images/website-img-4.jpg",
     link: "#",
   },
 ];
