@@ -9,14 +9,14 @@ const projects = [
     year: "Sep2024",
     align: "right",
     image: "/mushroomyyyblog/images/website-img-1.jpg",
-    link: "#",
+    link: "https://pr-ai-code-reviewer.vercel.app/",
   },
   {
     name: "Prompt Template",
     year: "Jan2025",
     align: "left",
     image: "/mushroomyyyblog/images/website-img-2.webp",
-    link: "#",
+    link: "https://bitbucket.org/debugging-dragons/prompt-template/src/main/",
   },
   {
     name: "n8n Automation",
