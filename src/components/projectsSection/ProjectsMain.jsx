@@ -30,7 +30,7 @@ const projects = [
     year: "May2025",
     align: "left",
     image: "/mushroomyyyblog/images/website-img-4.jpg",
-    link: "#",
+    link: "https://github.com/Dubstepmonk/FoodPrint",
   },
 ];
 
