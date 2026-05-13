@@ -1,0 +1,25 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mushroom cap -->
+  <path
+    d="M32 8C18.5 8 8 17.8 8 30c0 3.3 2.6 6 5.9 6h36.2c3.3 0 5.9-2.7 5.9-6C56 17.8 45.5 8 32 8Z"
+    fill="white"
+  />
+  <!-- Mushroom stem -->
+  <path
+    d="M24 32h16c2.8 0 5 2.2 5 5v11c0 3.9-3.1 7-7 7h-12c-3.9 0-7-3.1-7-7V37c0-2.8 2.2-5 5-5Z"
+    fill="white"
+  />
+  <!-- Highlight arc (subtle) -->
+  <path
+    d="M18 26c3.6-7 10.2-11 14-11 3.7 0 10.4 4 14 11"
+    fill="none"
+    stroke="white"
+    strokeWidth="2.2"
+    strokeLinecap="round"
+    opacity="0.3"
+  />
+  <!-- Highlight dots -->
+  <circle cx="24" cy="24" r="1.4" fill="white" opacity="0.4" />
+  <circle cx="33" cy="20" r="1.2" fill="white" opacity="0.4" />
+  <circle cx="41" cy="25" r="1.4" fill="white" opacity="0.4" />
+</svg>
