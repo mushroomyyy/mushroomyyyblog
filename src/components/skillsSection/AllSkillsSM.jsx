@@ -1,13 +1,10 @@
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import { SiTypescript } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
+import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiNextdotjs, SiOpenai, SiRedux, SiTypescript } from "react-icons/si";
 import { fadeIn } from "../../framerMotion/variants";
+import { N8nIcon } from "./SkillIcons";
 
 const skills = [
   {
@@ -39,6 +36,14 @@ const skills = [
     icon: SiNextdotjs,
   },
   {
+    skill: "OpenAI",
+    icon: SiOpenai,
+  },
+  {
+    skill: "n8n",
+    icon: N8nIcon,
+  },
+  {
     skill: "TailwindCSS",
     icon: RiTailwindCssFill,
   },
@@ -55,10 +60,12 @@ const AllSkillsSM = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.7 }}
             key={index}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center hover:-translate-y-5 transition-all duration-500"
           >
-            <item.icon className="text-7xl text-orange" />
-            <p className="text-center mt-4">{item.skill}</p>
+            <div className="bg-white/5 text-white h-[80px] w-[80px] flex items-center justify-center rounded-full hover:scale-105 transform transition-all duration-500 text-4xl border border-white/15 backdrop-blur-sm shadow-[0_0_0_1px_rgba(255,255,255,0.03)]">
+              <item.icon />
+            </div>
+            <p className="text-white/80 font-medium tracking-wide text-center mt-6 whitespace-nowrap">{item.skill}</p>
           </motion.div>
         );
       })}

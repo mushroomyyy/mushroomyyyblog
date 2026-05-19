@@ -1,9 +1,8 @@
 {
   "name": "mushroomyyyblog",
-  "version": "2.0",
+  "version": "0.0.0",
   "homepage": "https://mushroomyyy.github.io/mushroomyyyblog",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,14 +14,20 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@radix-ui/react-slot": "^1.2.4",
     "@reduxjs/toolkit": "^2.5.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "framer-motion": "^11.15.0",
+    "lucide-react": "^1.14.0",
+    "pdfjs-dist": "^5.4.624",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
     "react-redux": "^9.2.0",
-    "react-scroll": "^1.9.0"
+    "react-scroll": "^1.9.0",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

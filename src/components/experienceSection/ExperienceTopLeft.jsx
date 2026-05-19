@@ -2,19 +2,18 @@ import ExperienceInfo from "./ExperienceInfo";
 
 const ExperienceTopLeft = () => {
   return (
-    <div className="flex flex-col gap-6 w-[300px]">
-      <p className="text-orange font-bold uppercase text-3xl font-special text-center">
+    <div className="flex flex-col gap-6 sm:w-full lg:w-[300px] bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+      <p className="text-white font-semibold uppercase text-sm font-body text-center tracking-[0.28em]">
         Since 2023
       </p>
       <div className="flex justify-center items-center gap-4">
-        <ExperienceInfo number="2" text="Years" />
-        <p className="font-bold text-6xl text-lightBrown">-</p>
-        <ExperienceInfo number="4" text="Websites" />
+        <ExperienceInfo number="3" text="Years" />
+        <p className="font-semibold text-5xl text-white/20">-</p>
+        <ExperienceInfo number="5" text="Projects" />
       </div>
-      <p className="text-center">
-        With 2 years of experience enhancing secure and automated software delivery pipelines in an enterprise banking environment.
+      <p className="text-center text-white/65 leading-relaxed text-sm font-body">
+        With 3 years of experience building secure, reliable systems and shipping practical engineering solutions in enterprise environments.
       </p>
-      <ExperienceInfo number="$7k" text="Expected Salary" />
     </div>
   );
 };

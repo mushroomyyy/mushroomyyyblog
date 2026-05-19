@@ -1,7 +1,7 @@
 const ExperienceTopRight = () => {
   return (
-    <div className="xl:w-[25%] lg:w-[30%] border border-lightBrown p-4 rounded-xl">
-      <p className="text-lg text-center text-lightGrey">
+    <div className="sm:w-full xl:w-[25%] lg:w-[30%] border border-white/10 p-4 rounded-2xl bg-white/5 backdrop-blur-sm">
+      <p className="sm:text-sm lg:text-lg text-center text-white/65 leading-relaxed">
         I specialize in{" "}
         <span className="font-bold text-white">
           Java, Groovy and React

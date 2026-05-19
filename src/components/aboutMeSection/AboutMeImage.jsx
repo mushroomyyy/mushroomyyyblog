@@ -1,15 +1,21 @@
+import { motion } from "framer-motion";
+
 const AboutMeImage = () => {
   return (
-    <div className="h-[500px] w-[350px] relative">
-      <div className="h-[500px] w-[350px] rounded-[100px] absolute overflow-hidden">
+    <motion.div
+      whileHover={{ y: -10, rotateY: 7, rotateX: 3, scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 170, damping: 16 }}
+      className="sm:w-[80vw] sm:max-w-[350px] md:w-[350px] relative photo-tilt"
+    >
+      <div className="rounded-[100px] overflow-hidden relative">
+        <div className="photo-shine" />
         <img
           src="/mushroomyyyblog/images/about-me-section.png"
           alt="About Me Image"
-          className="h-full w-auto object-contain transform"
+          className="w-full h-auto object-contain transform transition duration-500"
         />
       </div>
-      <div className="h-[500px] w-[250px] bg-taro absolute bottom-[-30px] left-[-30px] rounded-bl-[120px] rounded-tr-[120px] rounded-br-[20px] rounded-tl-[20px] -z-10"></div>
-    </div>
+    </motion.div>
   );
 };
 

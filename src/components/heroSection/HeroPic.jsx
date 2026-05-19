@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { PiHexagonThin } from "react-icons/pi";
 import { fadeIn } from "../../framerMotion/variants";
 
 const HeroPic = () => {
@@ -9,16 +8,18 @@ const HeroPic = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0 }}
-      className=" h-full flex items-center justify-center "
+      whileHover={{ rotateY: -6, rotateX: 4, scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 180, damping: 18 }}
+      className="h-full flex items-center justify-center photo-tilt"
     >
-      <img
-        src="/mushroomyyyblog/images/hero-section.png"
-        alt="Jordan Chua"
-        className="max-h-[450px] w-auto"
-      />
-
-      <div className=" absolute -z-10 flex justify-center items-center animate-pulse ">
-        <PiHexagonThin className=" md:h-[90%] sm:h-[120%] min-h-[600px] w-auto text-lightTaro blur-md animate-[spin_20s_linear_infinite] " />
+      <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] backdrop-blur-sm">
+        <div className="photo-depth-layer" />
+        <div className="photo-shine" />
+        <img
+          src="/mushroomyyyblog/images/hero-section.png"
+          alt="Jordan Chua"
+          className="sm:max-h-[240px] md:max-h-[340px] lg:max-h-[420px] w-auto rounded-[1.25rem] grayscale-[0.08] transition duration-500"
+        />
       </div>
     </motion.div>
   );

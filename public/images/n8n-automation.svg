@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="n8n automation pipeline illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030303"/>
+      <stop offset="100%" stop-color="#101010"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f3d48d"/>
+      <stop offset="100%" stop-color="#8ed7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" rx="44" fill="url(#bg)"/>
+  <circle cx="190" cy="160" r="120" fill="#ffffff" opacity="0.03"/>
+  <circle cx="980" cy="560" r="150" fill="#ffffff" opacity="0.03"/>
+  <text x="90" y="120" fill="#ffffff" font-size="58" font-weight="800" font-family="Arial, Helvetica, sans-serif" opacity="0.9">n8n</text>
+  <text x="90" y="165" fill="#cfcfcf" font-size="22" font-family="Arial, Helvetica, sans-serif">automation pipeline</text>
+  <path d="M180 360h160c40 0 60-20 80-44l42-52c18-22 42-34 72-34h100" fill="none" stroke="url(#line)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M660 230h160c36 0 60 18 82 46l44 54c18 23 42 34 72 34h112" fill="none" stroke="url(#line)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <path d="M180 470h180c36 0 58 14 80 38l45 50c20 22 44 32 74 32h110" fill="none" stroke="url(#line)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.78"/>
+  <rect x="130" y="300" width="90" height="120" rx="24" fill="#151515" stroke="#3b3b3b"/>
+  <rect x="340" y="248" width="120" height="120" rx="28" fill="#151515" stroke="#3b3b3b"/>
+  <rect x="520" y="190" width="120" height="120" rx="28" fill="#151515" stroke="#3b3b3b"/>
+  <rect x="720" y="250" width="120" height="120" rx="28" fill="#151515" stroke="#3b3b3b"/>
+  <rect x="900" y="340" width="120" height="120" rx="28" fill="#151515" stroke="#3b3b3b"/>
+  <circle cx="175" cy="360" r="22" fill="url(#line)"/>
+  <circle cx="400" cy="308" r="22" fill="url(#line)"/>
+  <circle cx="580" cy="250" r="22" fill="url(#line)"/>
+  <circle cx="780" cy="310" r="22" fill="url(#line)"/>
+  <circle cx="960" cy="400" r="22" fill="url(#line)"/>
+  <path d="M355 286h70" stroke="#f3f3f3" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+  <path d="M538 228h84" stroke="#f3f3f3" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+  <path d="M745 284h70" stroke="#f3f3f3" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+  <path d="M930 374h70" stroke="#f3f3f3" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+  <path d="M520 525h250" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.28"/>
+  <text x="520" y="470" fill="#ffffff" font-size="40" font-weight="800" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">workflow</text>
+</svg>

@@ -1,16 +1,18 @@
-import { Link } from "react-scroll";
-import { LuArrowDownRight } from "react-icons/lu";
+import { LuArrowUpRight } from "react-icons/lu";
 
 const NavbarBtn = () => {
   return (
-    <button className=" px-4 py-2 rounded-full text-xl font-bold font-body text-white border-cyan border flex items-center gap-1 bg-gradient-to-r  from-darkCyan to-orange transition-all duration-500 hover:scale-110 hover:border-orange cursor-pointer hover:shadow-cyanShadow">
-      <Link spy={true} smooth={true} duration={500} offset={-120} to="contact">
-        Hire Me
-      </Link>
+    <a
+      href="https://www.linkedin.com/in/jordanvckj/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-4 py-2 rounded-full text-lg font-bold font-body text-white border border-white/15 flex items-center gap-1 bg-white/5 transition-all duration-500 hover:scale-105 hover:bg-white hover:text-black cursor-pointer"
+    >
+      Hire Me
       <div className="sm:hidden md:block">
-        <LuArrowDownRight />
+        <LuArrowUpRight />
       </div>
-    </button>
+    </a>
   );
 };
 

@@ -5,23 +5,23 @@ import SingleExperience from "./SingleExperience";
 
 const experiences = [
   {
-    job: "DevSecOps Engineer",
+    job: "AI Backend & DevSecOps Engineer",
     company: "United Overseas Bank",
     date: "2023 - Present",
+    responsibilities: [
+      "Builds AI-assisted backend tooling and secure automation for internal engineering workflows.",
+      "Owns DevSecOps delivery patterns that improve reliability and deployment confidence.",
+      "Partners with teams to simplify engineering processes and reduce manual overhead.",
+    ],
+  },
+  {
+    job: "DevSecOps Engineer",
+    company: "United Overseas Bank",
+    date: "2022 - 2023",
     responsibilities: [
       "Automated and secured CI/CD with scalable, reusable components.",
       "Improved performance and reliability across dev and deployment workflows.",
       "Streamlined secure dev processes to enhance developer experience.",
-    ],
-  },
-  {
-    job: "P. Engineering Intern",
-    company: "Thales Armed Forces",
-    date: "2022 - 2023",
-    responsibilities: [
-      "Streamlining manual processes (document validation, and quality assurance checks)",
-      "Developed an RPA tool to automate quality assurance.",
-      "This project expected to cut over 80% of man-hours.",
     ],
   },
   {

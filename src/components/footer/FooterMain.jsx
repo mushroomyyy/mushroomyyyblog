@@ -1,52 +1,36 @@
-import { Link } from "react-scroll";
-
 const FooterMain = () => {
-  const footerLinks = [
-    {
-      name: "About Me",
-      section: "about",
-    },
-    {
-      name: "Skills",
-      section: "skills",
-    },
-    {
-      name: "Experience",
-      section: "experience",
-    },
-    {
-      name: "Projects",
-      section: "projects",
-    },
-  ];
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="px-4">
-      <div className="w-full h-[1px] bg-lightGrey mt-24"></div>
-      <div className="md:flex justify-between mt-4 max-w-[1200px] mx-auto sm:hidden">
-        <p className="text-3xl text-lightGrey ">Jordan Chua</p>
-        <ul className="flex gap-4 text-lightGrey text-xl">
-          {footerLinks.map((item, index) => {
-            return (
-              <li key={index}>
-                <Link
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={-120}
-                  to={item.section}
-                  className="hover:text-white transition-all duration-500 cursor-pointer"
-                >
-                  {item.name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+    <footer className="mt-24 mb-12 flex flex-col items-center gap-6 px-4">
+      <button
+        onClick={scrollToTop}
+        aria-label="Back to top"
+        className="group flex flex-col items-center gap-2 cursor-pointer"
+      >
+        <span className="flex items-center justify-center w-10 h-10 rounded-full border border-white/20 bg-white/5 text-white/60 transition-all duration-300 group-hover:bg-white group-hover:text-black group-hover:border-white group-hover:scale-110">
+          ↑
+        </span>
+        <span className="text-[10px] uppercase tracking-[0.35em] text-white/35 group-hover:text-white/60 transition-colors duration-300">
+          Back to top
+        </span>
+      </button>
+
+      <div className="text-center max-w-sm">
+        <p className="text-sm italic text-white/40 leading-relaxed">
+          &ldquo;But the brightest of lights, casts the darkest of shadows.&rdquo;
+        </p>
+        <p className="mt-1 text-[10px] uppercase tracking-[0.35em] text-white/20">
+          — Phoenix Wright
+        </p>
       </div>
-      <p className="max-w-[1200px] mx-auto text-right mt-2 mb-12 text-sm text-lightBrown">
-        © 2025 Mushroomyyy | All Rights Reserved.
+
+      <p className="text-[11px] text-white/20 tracking-wide">
+        © 2025 Mushroomyyy
       </p>
-    </div>
+    </footer>
   );
 };
 
