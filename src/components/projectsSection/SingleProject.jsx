@@ -2,31 +2,37 @@ import { motion } from "framer-motion";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import { fadeIn } from "../../framerMotion/variants";
 
-const SingleProject = ({ name, year, align, image, link }) => {
+const SingleProject = ({ name, year, align, image, link, description, stack }) => {
   return (
     <motion.div
       variants={fadeIn("top", 0)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       className={`flex w-full sm:flex-col-reverse items-center gap-8 ${
         align === "left" ? "md:flex-row" : "md:flex-row-reverse"
       } justify-end sm:flex-col`}
     >
-      <div>
+      <div className={`flex flex-col gap-2 ${align === "left" ? "md:items-end" : "md:items-start"} sm:items-center`}>
         <h2 className="md:text-3xl sm:text-2xl text-white">{name}</h2>
-        <h2
-          className={`text-xl font-thin text-white font-special sm:text-center ${
-            align === "left" ? "md:text-right" : "md:text-left"
-          }`}
-        >
-          {year}
-        </h2>
+        <h2 className="text-sm font-thin text-white/50 font-special">{year}</h2>
+        {description && (
+          <p className={`text-sm text-white/60 leading-relaxed max-w-[300px] ${align === "left" ? "md:text-right" : "md:text-left"} sm:text-center`}>
+            {description}
+          </p>
+        )}
+        {stack && stack.length > 0 && (
+          <div className={`flex flex-wrap gap-2 mt-1 ${align === "left" ? "md:justify-end" : "md:justify-start"} sm:justify-center`}>
+            {stack.map((tech) => (
+              <span key={tech} className="px-2.5 py-0.5 rounded-full border border-white/20 bg-white/5 text-xs text-white/70">
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
         <a
           href={link}
-          className={`text-lg flex gap-2 items-center text-white/70 hover:text-white transition-all duration-500 cursor-pointer sm:justify-self-center ${
-            align === "left" ? "md:justify-self-end" : "md:justify-self-start"
-          }`}
+          className="mt-1 text-sm flex gap-2 items-center text-white/60 hover:text-white transition-all duration-300 cursor-pointer"
         >
           View <BsFillArrowUpRightCircleFill />
         </a>

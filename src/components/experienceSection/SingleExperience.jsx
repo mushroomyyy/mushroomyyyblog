@@ -7,7 +7,7 @@ const SingleExperience = ({ experience }) => {
       variants={fadeIn("right", 0)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.7 }}
+      viewport={{ once: true, amount: 0.7 }}
       className="md:h-[350px] md:w-[240px] sm:h-auto sm:w-full border border-white/10 rounded-2xl mt-12 p-4 bg-white/5 backdrop-blur-sm"
     >
       <p className="font-bold text-white">{experience.job}</p>

@@ -6,6 +6,7 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
   const handleName = (e) => {
     setName(e.target.value);
   };
@@ -27,17 +28,19 @@ const ContactForm = () => {
           setEmail("");
           setName("");
           setMessage("");
-          setSuccess("Message Sent Succesfully");
+          setError("");
+          setSuccess("Message sent successfully!");
         },
-        (error) => {
-          console.log("FAILED...", error.text);
+        () => {
+          setError("Failed to send. Please try again.");
         }
       );
   };
 
   return (
     <div>
-      <p className="text-cyan">{success}</p>
+      {success && <p className="text-green-400 text-sm">{success}</p>}
+      {error && <p className="text-red-400 text-sm">{error}</p>}
       <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
         <input
           type="text"

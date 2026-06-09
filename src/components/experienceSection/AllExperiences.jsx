@@ -49,7 +49,7 @@ const AllExperiences = () => {
                 variants={fadeIn("right", 0)}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.7 }}
+                viewport={{ once: true, amount: 0.7 }}
               >
                 <FaArrowRightLong className="text-6xl text-orange lg:block sm:hidden" />
               </motion.div>

@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     const timerId = window.setTimeout(() => {
       setIsBooting(false);
-    }, 1700);
+    }, 1200);
 
     return () => window.clearTimeout(timerId);
   }, []);

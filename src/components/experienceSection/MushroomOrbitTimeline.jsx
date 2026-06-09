@@ -72,7 +72,7 @@ const MushroomOrbitTimeline = () => {
       variants={fadeIn("up", 0.1)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       className="mt-14"
     >
       <div className="mb-4 px-1">

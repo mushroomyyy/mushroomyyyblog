@@ -7,7 +7,7 @@ const HeroPic = () => {
       variants={fadeIn("left", 0.2)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0 }}
+      viewport={{ once: true, amount: 0 }}
       whileHover={{ rotateY: -6, rotateX: 4, scale: 1.02 }}
       transition={{ type: "spring", stiffness: 180, damping: 18 }}
       className="h-full flex items-center justify-center photo-tilt"

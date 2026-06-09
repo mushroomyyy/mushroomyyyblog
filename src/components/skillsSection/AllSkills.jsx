@@ -60,7 +60,7 @@ const AllSkills = () => {
               variants={fadeIn("up", `0.${index}`)}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: false, amount: 0 }}
+              viewport={{ once: true, amount: 0 }}
               key={index}
             >
               <SingleSkill

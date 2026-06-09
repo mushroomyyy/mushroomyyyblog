@@ -14,7 +14,7 @@ const DanceJourneySection = () => {
         variants={fadeIn("up", 0.1)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.35 }}
+        viewport={{ once: true, amount: 0.35 }}
         className="rounded-lg border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
       >
         <p className="text-[10px] uppercase tracking-[0.35em] text-white/50">Personal</p>
