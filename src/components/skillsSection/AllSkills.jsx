@@ -1,10 +1,9 @@
 import { FaCss3Alt, FaHtml5, FaJava, FaPython, FaReact, FaVuejs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiNextdotjs, SiNuxtdotjs, SiOpenai, SiRedux, SiTypescript } from "react-icons/si";
+import { SiApachegroovy, SiClaude, SiN8N, SiNextdotjs, SiNuxtdotjs, SiOpenai, SiRedux, SiTypescript } from "react-icons/si";
 import { Marquee } from "../ui/marquee";
 import SingleSkill from "./SingleSkill";
-import { ClaudeIcon, GroovyIcon, N8nIcon } from "./SkillIcons";
 
 const skills = [
   { skill: "HTML", icon: FaHtml5 },
@@ -17,11 +16,11 @@ const skills = [
   { skill: "NuxtJS", icon: SiNuxtdotjs },
   { skill: "VueJS", icon: FaVuejs },
   { skill: "OpenAI", icon: SiOpenai },
-  { skill: "Claude", icon: ClaudeIcon },
-  { skill: "n8n", icon: N8nIcon },
+  { skill: "Claude", icon: SiClaude },
+  { skill: "n8n", icon: SiN8N },
   { skill: "TailwindCSS", icon: RiTailwindCssFill },
   { skill: "Python", icon: FaPython },
-  { skill: "Groovy", icon: GroovyIcon },
+  { skill: "Groovy", icon: SiApachegroovy },
   { skill: "Java", icon: FaJava },
 ];
 
