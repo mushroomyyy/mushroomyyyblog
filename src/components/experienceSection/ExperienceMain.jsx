@@ -10,10 +10,10 @@ const MascotRed = ({ side, delay }) => (
     src="/mushroomyyyblog/images/mushroom-cap-red-final.png"
     alt=""
     className="absolute top-0 w-20 opacity-90 pointer-events-none hidden md:block z-10"
-    style={{ filter: "drop-shadow(0 0 24px rgba(220,0,0,0.9))" }}
     style={{
       [side]: 0,
       transform: side === "left" ? "scaleX(-1)" : "none",
+      filter: "drop-shadow(0 0 24px rgba(220,0,0,0.9))",
     }}
     animate={{ y: [0, -7, 0] }}
     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay }}

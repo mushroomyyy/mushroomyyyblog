@@ -7,10 +7,10 @@ const MascotGold = ({ side, delay }) => (
     src="/mushroomyyyblog/images/mushroom-cap-gold.png"
     alt=""
     className="absolute top-0 w-20 opacity-90 pointer-events-none hidden md:block z-10"
-    style={{ filter: "drop-shadow(0 0 24px rgba(212,175,55,0.9))" }}
     style={{
       [side]: 0,
       transform: side === "left" ? "scaleX(-1)" : "none",
+      filter: "drop-shadow(0 0 24px rgba(212,175,55,0.9))",
     }}
     animate={{ y: [0, -7, 0] }}
     transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay }}
