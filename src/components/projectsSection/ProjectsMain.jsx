@@ -42,9 +42,26 @@ const projects = [
   },
 ];
 
+const MascotBlue = ({ side, delay }) => (
+  <motion.img
+    src="/mushroomyyyblog/images/mushroom-cap-blue-cyan.png"
+    alt=""
+    className="absolute top-0 w-20 opacity-90 pointer-events-none hidden md:block z-10"
+    style={{
+      [side]: 0,
+      transform: side === "left" ? "scaleX(-1)" : "none",
+      filter: "drop-shadow(0 0 32px rgba(0,120,255,0.95)) saturate(2) hue-rotate(10deg)",
+    }}
+    animate={{ y: [0, -7, 0] }}
+    transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay }}
+  />
+);
+
 const ProjectsMain = () => {
   return (
-    <div id="projects" className="max-w-[1200px] mx-auto px-4">
+    <div id="projects" className="max-w-[1200px] mx-auto px-4 relative">
+      <MascotBlue side="right" delay={1} />
+      <MascotBlue side="left" delay={1.8} />
       <motion.div
         variants={fadeIn("top", 0)}
         initial="hidden"
@@ -54,20 +71,18 @@ const ProjectsMain = () => {
         <ProjectsText />
       </motion.div>
       <div className="flex flex-col gap-20 max-w-[900px] mx-auto mt-12">
-        {projects.map((project, index) => {
-          return (
-            <SingleProject
-              key={index}
-              name={project.name}
-              year={project.year}
-              align={project.align}
-              image={project.image}
-              link={project.link}
-              description={project.description}
-              stack={project.stack}
-            />
-          );
-        })}
+        {projects.map((project, index) => (
+          <SingleProject
+            key={index}
+            name={project.name}
+            year={project.year}
+            align={project.align}
+            image={project.image}
+            link={project.link}
+            description={project.description}
+            stack={project.stack}
+          />
+        ))}
       </div>
     </div>
   );

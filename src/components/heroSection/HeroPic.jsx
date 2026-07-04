@@ -12,7 +12,14 @@ const HeroPic = () => {
       transition={{ type: "spring", stiffness: 180, damping: 18 }}
       className="h-full flex items-center justify-center photo-tilt"
     >
-      <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] backdrop-blur-sm">
+      <div
+        className="relative rounded-[2rem] p-4 backdrop-blur-sm"
+        style={{
+          border: "1px solid rgba(212,175,55,0.18)",
+          background: "rgba(212,175,55,0.03)",
+          boxShadow: "0 0 0 1px rgba(212,175,55,0.04), 0 24px 60px rgba(0,0,0,0.5)",
+        }}
+      >
         <div className="photo-depth-layer" />
         <div className="photo-shine" />
         <img

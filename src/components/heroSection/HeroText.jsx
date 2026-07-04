@@ -1,63 +1,54 @@
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
+import BlurText from "../ui/blur-text";
+import ShimmerButton from "../ui/shimmer-button";
+import SplitText from "../ui/split-text";
 
 const HeroText = () => {
   return (
     <div className="flex flex-col gap-4 h-full justify-center md:text-left sm:text-center max-w-[560px]">
-      <motion.h2
-        variants={fadeIn("down", 0.2)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0 }}
-        className="lg:text-lg sm:text-base uppercase tracking-[0.4em] text-white/60"
-      >
-        AI Backend & DevSecOps Engineer
-      </motion.h2>
-      <motion.h1
-        variants={fadeIn("right", 0.4)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0 }}
-        className="md:text-[2.8rem] lg:text-6xl sm:text-4xl text-white font-bold uppercase leading-none"
-      >
-        Jordan <br className="sm:hidden md:block" />
-        Chua
-      </motion.h1>
-      <motion.p
-        variants={fadeIn("up", 0.6)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0 }}
-        className="sm:text-sm md:text-base lg:text-lg mt-4 text-white/70 leading-relaxed"
-      >
-        I build secure automation, resilient pipelines, and practical web experiences.
-        <br /> Minimal surface, strong delivery, measurable impact.
-      </motion.p>
-      <motion.div
-        variants={fadeIn("up", 0.8)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0 }}
-        className="flex flex-wrap gap-3 mt-6 md:justify-start sm:justify-center"
-      >
-        <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
-          Security + automation
-        </span>
-        <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
-          3+ years of impact
-        </span>
-        <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
-          Enterprise delivery
-        </span>
-      </motion.div>
-          <div className="mt-6 md:mt-8 flex md:justify-start sm:justify-center">
-            <button
-              onClick={() => window.dispatchEvent(new Event("openCV"))}
-              className="px-6 py-2.5 rounded-full bg-white text-black font-semibold text-sm hover:bg-white/90 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
-            >
-              Preview CV
-            </button>
-          </div>
+      <BlurText
+        text="AI Backend & DevSecOps Engineer"
+        as="h2"
+        delay={0.1}
+        className="lg:text-lg sm:text-base uppercase tracking-[0.4em]"
+        style={{ color: "rgba(212,175,55,0.65)" }}
+      />
+
+      <h1 className="md:text-[2.8rem] lg:text-6xl sm:text-4xl font-bold uppercase leading-none gold-gradient-text">
+        <SplitText text="Jordan" delay={0.3} stagger={0.055} />
+        <br className="sm:hidden md:block" />
+        <SplitText text="Chua" delay={0.75} stagger={0.055} />
+      </h1>
+
+      <BlurText
+        text="I build secure automation, resilient pipelines, and practical web experiences. Minimal surface, strong delivery, measurable impact."
+        as="p"
+        delay={1.1}
+        className="sm:text-sm md:text-base lg:text-lg mt-4 leading-relaxed"
+        style={{ color: "rgba(237,224,192,0.7)" }}
+      />
+
+      <div className="flex flex-wrap gap-3 mt-6 md:justify-start sm:justify-center">
+        {["Security + automation", "3+ years of impact", "Enterprise delivery"].map((label, i) => (
+          <BlurText
+            key={label}
+            text={label}
+            as="span"
+            delay={1.4 + i * 0.12}
+            className="rounded-full px-4 py-2 text-sm backdrop-blur-sm transition-all duration-300"
+            style={{
+              color: "rgba(212,175,55,0.85)",
+              border: "1px solid rgba(212,175,55,0.22)",
+              background: "rgba(212,175,55,0.05)",
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="mt-6 md:mt-8 flex md:justify-start sm:justify-center">
+        <ShimmerButton onClick={() => window.dispatchEvent(new Event("openCV"))}>
+          Preview CV
+        </ShimmerButton>
+      </div>
     </div>
   );
 };

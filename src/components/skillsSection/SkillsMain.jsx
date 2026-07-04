@@ -6,8 +6,8 @@ import SkillsText from "./SkillsText";
 
 const SkillsMain = () => {
   return (
-    <div id="skills">
-      <div className="max-w-[1200px] px-4 mx-auto sm:min-h-0 lg:min-h-[600px] relative overflow-hidden pt-24 pb-8 flex flex-col items-center">
+    <div id="skills" className="relative">
+<div className="max-w-[1200px] px-4 mx-auto sm:min-h-0 lg:min-h-[600px] relative overflow-hidden pt-24 pb-8 flex flex-col items-center">
         <motion.div
           variants={fadeIn("down", 0.2)}
           initial="hidden"

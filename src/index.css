@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --gold: #D4AF37;
+  --gold-light: #F2D060;
+  --gold-dark: #9A7B1C;
+  --gold-muted: rgba(212, 175, 55, 0.18);
+  --gold-border: rgba(212, 175, 55, 0.22);
+  --navy: #050710;
+  --ivory: #EDE0C0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,29 +22,33 @@ body {
 }
 
 ::selection {
-  background: rgba(255, 255, 255, 0.22);
-  color: #f1e1d9;
+  background: rgba(212, 175, 55, 0.28);
+  color: #F2D060;
 }
 
 body {
   margin: 0;
 }
 
+/* ── Boot screen ──────────────────────────────── */
 .boot-shell {
   width: min(86vw, 520px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.28);
   border-radius: 22px;
   padding: 1.2rem 1.2rem 1.4rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(212, 175, 55, 0.03);
   backdrop-filter: blur(6px);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(212, 175, 55, 0.06);
   animation: bootFloat 1.4s ease-in-out infinite alternate;
 }
 
 .boot-label {
   margin: 0;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(135deg, #F2D060, #D4AF37, #C9A227);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   letter-spacing: 0.28em;
   font-size: 0.8rem;
   display: flex;
@@ -51,16 +65,16 @@ body {
 
 .boot-subtitle {
   margin: 0.5rem 0 1rem;
-  color: rgba(255, 255, 255, 0.58);
+  color: rgba(212, 175, 55, 0.55);
   font-size: 0.95rem;
   animation: bootSubtitleGlow 1.6s ease-in-out infinite alternate;
 }
 
 .boot-track {
   width: 100%;
-  height: 8px;
+  height: 6px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(212, 175, 55, 0.1);
   overflow: hidden;
   position: relative;
 }
@@ -72,21 +86,22 @@ body {
   height: 100%;
   width: 40%;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.95));
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.15), rgba(242, 208, 96, 0.95), rgba(212, 175, 55, 0.15));
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
   animation: bootLoad 1.5s ease-in-out infinite;
 }
 
 @keyframes bootLoad {
   0% {
     left: -40%;
-    opacity: 0.2;
+    opacity: 0.3;
   }
   50% {
     opacity: 1;
   }
   100% {
     left: 100%;
-    opacity: 0.2;
+    opacity: 0.3;
   }
 }
 
@@ -114,15 +129,16 @@ body {
 
 @keyframes bootSubtitleGlow {
   0% {
-    color: rgba(255, 255, 255, 0.45);
-    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    color: rgba(212, 175, 55, 0.38);
+    text-shadow: 0 0 0 rgba(212, 175, 55, 0);
   }
   100% {
-    color: rgba(255, 255, 255, 0.74);
-    text-shadow: 0 0 18px rgba(255, 255, 255, 0.2);
+    color: rgba(242, 208, 96, 0.72);
+    text-shadow: 0 0 18px rgba(212, 175, 55, 0.3);
   }
 }
 
+/* ── Photo card ───────────────────────────────── */
 .photo-tilt {
   transform-style: preserve-3d;
   perspective: 1200px;
@@ -132,8 +148,8 @@ body {
   position: absolute;
   inset: -14px;
   border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  opacity: 0.45;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  opacity: 0.5;
   filter: blur(0.5px);
   transform: translateZ(-20px) scale(0.98);
   pointer-events: none;
@@ -143,11 +159,34 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(115deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.03) 46%, transparent 70%);
+  background: linear-gradient(115deg, rgba(242, 208, 96, 0.18), rgba(212, 175, 55, 0.04) 46%, transparent 70%);
   opacity: 0;
   transition: opacity 0.35s ease;
+  border-radius: 1.25rem;
 }
 
 .photo-tilt:hover .photo-shine {
-  opacity: 0.7;
+  opacity: 1;
+}
+
+/* ── Gold ornamental rule ─────────────────────── */
+.gold-rule {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), rgba(212, 175, 55, 0.6), rgba(212, 175, 55, 0.4), transparent);
+}
+
+/* ── Gold text shimmer ────────────────────────── */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F2D060 0%, #D4AF37 45%, #C9A227 70%, #F2D060 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 4s linear infinite;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }

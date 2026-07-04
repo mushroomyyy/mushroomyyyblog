@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import { fadeIn } from "../../framerMotion/variants";
+import MovingBorder from "../ui/moving-border";
 
 const SingleProject = ({ name, year, align, image, link, description, stack }) => {
   return (
@@ -30,12 +31,19 @@ const SingleProject = ({ name, year, align, image, link, description, stack }) =
             ))}
           </div>
         )}
-        <a
-          href={link}
-          className="mt-1 text-sm flex gap-2 items-center text-white/60 hover:text-white transition-all duration-300 cursor-pointer"
-        >
-          View <BsFillArrowUpRightCircleFill />
-        </a>
+        <MovingBorder containerClassName="mt-2" borderRadius="999px">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm flex gap-2 items-center px-4 py-1.5 transition-colors duration-300"
+            style={{ color: "rgba(212,175,55,0.8)" }}
+            onMouseEnter={e => { e.currentTarget.style.color = "#F2D060"; }}
+            onMouseLeave={e => { e.currentTarget.style.color = "rgba(212,175,55,0.8)"; }}
+          >
+            View <BsFillArrowUpRightCircleFill />
+          </a>
+        </MovingBorder>
       </div>
       <motion.div
         whileHover={{ y: -8, rotateY: align === "left" ? -6 : 6, rotateX: 4, scale: 1.03 }}
