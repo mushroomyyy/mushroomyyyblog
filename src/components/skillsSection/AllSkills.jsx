@@ -1,10 +1,10 @@
-import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
+import { FaCss3Alt, FaHtml5, FaJava, FaPython, FaReact, FaVuejs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiNextdotjs, SiOpenai, SiRedux, SiTypescript } from "react-icons/si";
+import { SiNextdotjs, SiNuxtdotjs, SiOpenai, SiRedux, SiTypescript } from "react-icons/si";
 import { Marquee } from "../ui/marquee";
 import SingleSkill from "./SingleSkill";
-import { HiggsFieldIcon, N8nIcon } from "./SkillIcons";
+import { ClaudeIcon, GroovyIcon, N8nIcon } from "./SkillIcons";
 
 const skills = [
   { skill: "HTML", icon: FaHtml5 },
@@ -14,10 +14,15 @@ const skills = [
   { skill: "ReactJS", icon: FaReact },
   { skill: "Redux", icon: SiRedux },
   { skill: "NextJS", icon: SiNextdotjs },
+  { skill: "NuxtJS", icon: SiNuxtdotjs },
+  { skill: "VueJS", icon: FaVuejs },
   { skill: "OpenAI", icon: SiOpenai },
+  { skill: "Claude", icon: ClaudeIcon },
   { skill: "n8n", icon: N8nIcon },
   { skill: "TailwindCSS", icon: RiTailwindCssFill },
-  { skill: "Higgsfield AI", icon: HiggsFieldIcon },
+  { skill: "Python", icon: FaPython },
+  { skill: "Groovy", icon: GroovyIcon },
+  { skill: "Java", icon: FaJava },
 ];
 
 const firstRow = skills.slice(0, 6);
